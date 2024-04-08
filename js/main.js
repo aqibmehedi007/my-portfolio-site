@@ -8,7 +8,7 @@ $(window).load(function(){
 
 	//==============___Page Loader___================
   
-  $('#page-loader').delay(300).fadeOut(400, function(){
+  $('#page-loader').delay(100).fadeOut(100, function(){
 
   });
 
@@ -22,7 +22,7 @@ $(window).load(function(){
 $(document).ready(function(){
 
 //==============___Page Loader___================
-  $('#loading-wraper').fadeIn(300);
+  $('#loading-wraper').fadeIn(100);
 
 //==============___Testimonials - owl Carousel___================
  $("#testimonial-carousel").owlCarousel({
@@ -95,7 +95,7 @@ $(".link-home").on('click', function(event){
   event.preventDefault();
 
   if (linkHome == 0) {
-    //pageOn();
+    pageOn();
   }
   else if (linkHome == 1) {
     $('.menuActive').removeClass('menuActive');

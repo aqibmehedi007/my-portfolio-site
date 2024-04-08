@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Style for pagination buttons */
+        .pagination {
+            margin-top: 20px;
+        }
+        .pagination button {
+            margin-right: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+        }
+        .pagination button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-posts">
+        <!-- Blog item 1 -->
+        <div class="blog-item">
+            <div class="blog-item-wrapper">
+                <div class="blog-item-title-wrapper">
+                    <h2 class="blog-item-title title-border" onclick="loadPage('page1.html');">Blog Post 1</h2>
+                </div>
+                <div class="blog-item-description">
+                    <p>This is the description of Blog Post 1.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Blog item 2 -->
+        <div class="blog-item">
+            <div class="blog-item-wrapper">
+                <div class="blog-item-title-wrapper">
+                    <h2 class="blog-item-title title-border" onclick="loadPage('page2.html');">Blog Post 2</h2>
+                </div>
+                <div class="blog-item-description">
+                    <p>This is the description of Blog Post 2.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Pagination buttons -->
+        <div class="pagination">
+            <button onclick="loadPage('page1.html')">1</button>
+            <button onclick="loadPage('page2.html')">2</button>
+            <!-- Add more buttons for additional pages as needed -->
+        </div>
+    </div>
+
+    <script>
+        function loadPage(pageUrl) {
+            // Load the content of the specified page into the section
+            $(".blog-posts").load(pageUrl);
+        }
+    </script>
+</body>
+</html>

@@ -29,6 +29,9 @@ Primary use:  Vcard / Personal / CV / Resume / Portfolio
 17. Section: Blog - Contact
 18. Crossbrowser Fallbacks
 -------------------------------------------------------------------*/
+
+
+
 /* ==========================================================
 ! 01. MIXINS / VARIABLES
 ==============	=========================================== */
@@ -418,14 +421,17 @@ iframe {
   box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.46);
   border-bottom: 15px solid #f4f4f4;
 }
+
 @media (min-width:992px) {
   .section-vcardbody {
     position: absolute;
     margin-top: 30px;
     left: 30%;
-    height: 570px;
+    height: 650px;
     width: 40%;
-    padding: 45px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-bottom: 20px;
   }
 }
@@ -445,7 +451,7 @@ iframe {
     -webkit-transform: translateY(-200px);
     visibility: hidden;
     padding: 20px;
-    padding-top: 0px;
+    padding-top: 20px;
   }
 }
 @media (min-width:992px) {
@@ -640,9 +646,16 @@ iframe {
   padding-top: 10px;
   margin-bottom: 5px;
 }
+
 .vcard-profile-description-text p {
   font-size: 13px;
 }
+
+.vcard-profile-description-text strong {
+  font-weight: bold;
+  font-family: Arial, sans-serif; /* Specify a font-family with a bold variant */
+}
+
 .hr1 {
   border: none;
   height: 1px;
@@ -713,7 +726,7 @@ iframe {
   color: #333;
   padding-left: 0;
   margin-left: 0;
-  font-size: 18px;
+  font-size: 25px;
   line-height: 22px;
   margin: 0;
   margin-bottom: 8px;
@@ -962,17 +975,63 @@ iframe {
   background: #021533 !important;
 }
 /* ==========================================================
+! x. Robotics
+========================================================== */
+
+.robototech-container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #e8e8e8;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.robototech-heading {
+  color: #333;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+.robototech-list {
+  list-style-type: none;
+  padding: 0;
+}
+.robototech-category {
+  margin-bottom: 10px;
+}
+.robototech-category strong {
+  font-weight: bold;
+  color: #285b6e;
+}
+.robototech-sublist {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.robototech-description {
+  margin-bottom: 5px;
+}
+.robototech-link {
+  color: #007bff;
+  text-decoration: none;
+}
+.robototech-bold {
+  font-weight: bold;
+}
+
+/* ==========================================================
 ! 12. SECTION: SKILLS
 ========================================================== */
 .skills-list {
   padding-left: 0;
   margin-left: 0;
 }
+
 .progress {
   position: relative;
   height: 25px;
   margin-bottom: 10px;
+  font-size: 20px;
 }
+
 .progress > .progress-type {
   position: absolute;
   left: 0px;
@@ -981,6 +1040,7 @@ iframe {
   color: #ffffff;
   background-color: rgba(25, 25, 25, 0.2);
 }
+
 .progress > .progress-completed {
   position: absolute;
   right: 0px;
@@ -989,20 +1049,72 @@ iframe {
   color: #888;
   font-size: 14px;
 }
+
 .skills-list {
   list-style: none;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
+
 .progress-bar {
   background: #08aeac;
   width: 20%;
 }
+
 .progress-bar-2 {
   background: #021533;
 }
+
 .progress-bar-3 {
   background: #d9212a;
 }
+
+
+/*================================================================*/
+
+
+
+.btn-label {
+  display: inline-block;
+  background: transparent; /* Make background fully transparent */
+  border-radius: 3px;
+  color: white;
+  margin-right: 5px; /* Adjust margin for spacing */
+}
+
+.btn-labeled {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.btn {
+  font-weight: lighter;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 6px 12px; /* Adjust padding as needed */
+  font-size: 12px; /* Adjust font size */
+  line-height: 1; /* Ensure proper line height */
+}
+
+/* Color Palette 1 */
+.btn-style1 {
+  background-color: #17a2b8;
+  border-color: #000000;
+}
+
+/* Color Palette 2 */
+.btn-style2 {
+  background-color: #17a2b8;
+  border-color: #000000;
+}
+
+/* Color Palette 3 */
+.btn-style3 {
+  background-color: #17a2b8;
+  border-color: #000000;
+}
+
+
+
 /* ==========================================================
 ! 13. SECTION: Portfolio
 ========================================================== */
